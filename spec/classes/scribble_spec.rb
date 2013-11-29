@@ -22,6 +22,6 @@ describe 'scribble' do
   it { should contain_concat__fragment('warning').with(
     'target' => '/etc/scribed/logs.conf',
     'content' => /^#This file is managed by Puppet/,
-    'order' => '01',
-    )}
+    'order' => '01'
+    ) }
 end

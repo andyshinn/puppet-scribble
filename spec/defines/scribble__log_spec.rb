@@ -25,7 +25,7 @@ describe 'scribble::log', :type => :define do
 
     it { should contain_concat__fragment('somemessageslog').with(
       'target' => '/etc/scribed/logs.conf',
-      'content' => /^messages \/var\/log\/messages$/,
+      'content' => /^messages \/var\/log\/messages$/
       )
     }
   end
@@ -39,7 +39,7 @@ describe 'scribble::log', :type => :define do
 
     it { should contain_concat__fragment('/var/log/httpd/error_log').with(
       'target' => '/etc/scribed/logs.conf',
-      'content' => /^default \/var\/log\/httpd\/error_log$/,
+      'content' => /^default \/var\/log\/httpd\/error_log$/
       )
     }
   end
